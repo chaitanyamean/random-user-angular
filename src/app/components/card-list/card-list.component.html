@@ -1,0 +1,24 @@
+
+        <mat-grid-list cols="4" rowHeight="500px">
+            <mat-grid-tile *ngFor="let item of userList" [colspan]="1">
+                <div class="card-container">
+                    <img src={{item.picture.large}} alt="genderImg"/>
+                    <p>Name: {{item.name.first}} {{item.name.last}}</p>
+                    <p>email: {{item.email}}</p>
+                    <p>username: {{item.login.username}}</p>
+                </div>
+            
+            </mat-grid-tile>
+            <mat-grid-tile (click)="onAddUserClick()">
+                <div class="card-container add-profile">
+                    <!-- <img src={{item.picture.medium}} alt="genderImg"/> -->
+                    <!-- <p>Name: {{item.name.first}}</p> -->
+                    <!-- <p>email: {{item.email}}</p> -->
+                    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon> -->
+                    <mat-icon aria-hidden="false" aria-label="Example add icon">add_circle</mat-icon>
+                    <h5>Add Profile</h5>
+                    
+                </div>
+
+            </mat-grid-tile>
+          </mat-grid-list>
